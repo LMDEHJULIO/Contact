@@ -39,7 +39,7 @@ render(){
 
   return (
     <div className="list-contacts">
-      <div>
+      <div className="list-contacts-top">
         <input
         className="search-contacts"
         type="text"
@@ -47,6 +47,7 @@ render(){
         value={query}
         onChange={(event) => this.updateQuery(event.target.value)}
         />
+        <a href="#create" onClick={this.props.onNavigate} className="add-contact">Add Contact</a>
       </div>
 
       {showingContacts.length !== contacts.length && (
